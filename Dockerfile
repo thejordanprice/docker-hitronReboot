@@ -22,8 +22,8 @@ RUN chmod 0644 /etc/cron.d/hitronreboot
 # Apply cron job
 RUN crontab /etc/cron.d/hitronreboot
 
-# Create the log file to be able to run tail
+# Create the log file incase needed
 RUN touch /var/log/cron.log
 
 # Run the command on container startup
-CMD cron && tail -f /var/log/cron.log
+CMD ["cron", "-f"]
