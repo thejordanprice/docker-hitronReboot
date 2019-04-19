@@ -18,7 +18,7 @@ docker stop [container id]
 docker rm [container id]
 ```
 
-I will write better documentation soon.
+I will write better documentation soon...
 
 This is planned to be used with an unRaid template (not written yet) OR some linux flavor.
 
