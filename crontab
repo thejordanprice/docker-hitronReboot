@@ -1,5 +1,6 @@
-30 23 * * * /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
+45 23 * * * /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
 
 # We source/export the docker environment variables if they are available.
 # Some reason I need to set it for 8:45 instead of 4:45... 
+# I keep changing the time because I am retesting and redeploying.
 # An empty line is required at the end of this file for a valid cron file.
