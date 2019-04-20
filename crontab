@@ -1,4 +1,4 @@
-15 23 * * * /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
+30 23 * * * /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
 
 # We source/export the docker environment variables if they are available.
 # Some reason I need to set it for 8:45 instead of 4:45... 
