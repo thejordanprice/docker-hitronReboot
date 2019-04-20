@@ -4,8 +4,6 @@ MAINTAINER thejordanprice@gmx.com
 # Upgrade repos and download required prerequisits
 RUN apt-get update && apt-get -y install cron jq curl git
 
-
-
 # Clone the github repository
 RUN git clone https://github.com/thejordanprice/hitronReboot /etc/hitronReboot
 
@@ -25,7 +23,7 @@ RUN crontab /etc/cron.d/hitronreboot
 RUN touch /var/log/cron.log
 
 # Print the environment variables with MODEM to file
-RUN printenv | sed 's/^\(.*\)$/export \1/g' | grep -E "^export MODEM" > /root/env.sh
+RUN printenv | sed 's/^\(.*\)$/export \1/g' > /root/env.sh
 
 # Run the command on container startup
 CMD ["cron", "-f"]
