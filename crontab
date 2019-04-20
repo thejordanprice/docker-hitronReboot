@@ -1,4 +1,5 @@
-45 8 * * * /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
-# An empty line is required at the end of this file for a valid cron file.
-# Some reason I need to set it for 8:45 instead of 4:45... 
+45 8 * * * root . /root/env.sh; /etc/hitronReboot/hitronReboot.sh > /proc/1/fd/1 2>/proc/1/fd/2
 
+# We source/export the docker environment variables if they are available.
+# Some reason I need to set it for 8:45 instead of 4:45... 
+# An empty line is required at the end of this file for a valid cron file.
